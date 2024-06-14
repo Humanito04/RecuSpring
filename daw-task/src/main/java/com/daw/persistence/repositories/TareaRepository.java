@@ -2,6 +2,7 @@ package com.daw.persistence.repositories;
 
 import com.daw.persistence.crud.TareaCrudRepository;
 import com.daw.persistence.entities.Tarea;
+import com.daw.persistence.entities.enums.Estado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -29,6 +30,17 @@ public class TareaRepository {
     public void deleteById(int idTarea){
         this.tareaCrudRepository.deleteById(idTarea);
     }
+    public List<Tarea> findByTituloStartingWith(String titulo){
+        return this.tareaCrudRepository.findByTituloStartingWith(titulo);
+    }
 
+    public List<Tarea> findByIdGreaterThan(int id){
+        return this.tareaCrudRepository.findByIdGreaterThan(id);
+    }
+
+
+    public List<Tarea> findByEstado(Estado estado) {
+        return this.tareaCrudRepository.findByEstado(estado);
+    }
 
 }

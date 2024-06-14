@@ -61,4 +61,25 @@ public class TareaController {
         }
     }
 
+    @GetMapping("/empiezan")
+    public ResponseEntity<List<Tarea>> empiezanP(@RequestParam String titulo){
+        return  ResponseEntity.ok(this.tareaService.getTareasEmpiezanPorP(titulo));
+    }
+
+    @GetMapping("/mayores")
+    public ResponseEntity<List<Tarea>> mayores4(@RequestParam int idTarea){
+        return ResponseEntity.ok(this.tareaService.getTareasIdMayorQue4(idTarea));
+    }
+
+
+    @GetMapping("/pendientes")
+    public ResponseEntity<List<Tarea>> getTareasPendientes() {
+        List<Tarea> tareasPendientes = tareaService.getTareasPendientes();
+        if (tareasPendientes.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(tareasPendientes, HttpStatus.OK);
+    }
+
+
 }

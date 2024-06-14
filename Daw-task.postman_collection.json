@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "c0aab4db-2b54-4693-b3ed-72092648314c",
+		"name": "Daw-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35166147"
+	},
+	"item": [
+		{
+			"name": "Tareas",
+			"item": [
+				{
+					"name": "Find By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleted By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Created Task",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"titulo\": \"Probando el endpoint\",\r\n    \"descripcion\": \"Realizado en clase\",\r\n    \"fechaCreacion\": \"2024-06-04\",\r\n    \"fechaVencimiento\": \"2024-03-15\",\r\n    \"estado\": \"EN_PROGRESO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empiezan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/empiezan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"empiezan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mayores",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/mayores",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"mayores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mayores2.0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/mayores?idTarea=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"mayores"
+							],
+							"query": [
+								{
+									"key": "idTarea",
+									"value": "3"
+								},
+								{
+									"key": "pepe",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empiezan2.0",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/empiezan?titulo=C",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"empiezan"
+							],
+							"query": [
+								{
+									"key": "titulo",
+									"value": "C"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

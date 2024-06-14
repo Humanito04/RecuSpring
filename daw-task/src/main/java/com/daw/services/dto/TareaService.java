@@ -44,5 +44,17 @@ public class TareaService {
     return result;
     }
 
+    public List<Tarea> getTareasEmpiezanPorP(String titulo){
+        return this.tareaRepository.findByTituloStartingWith(titulo);
+    }
+
+    public List<Tarea> getTareasIdMayorQue4(int idTarea){
+        return this.tareaRepository.findByIdGreaterThan(idTarea);
+    }
+
+    public List<Tarea> getTareasPendientes() {
+        return this.tareaRepository.findByEstado(Estado.PENDIENTE);
+    }
+
 
 }
