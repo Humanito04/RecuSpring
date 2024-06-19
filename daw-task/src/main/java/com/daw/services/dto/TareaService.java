@@ -56,5 +56,23 @@ public class TareaService {
         return this.tareaRepository.findByEstado(Estado.PENDIENTE);
     }
 
+    public List<Tarea> getTareasEnProgreso() {
+        return this.tareaRepository.findByEstado(Estado.EN_PROGRESO);
+    }
 
+    public List<Tarea> getTareasCompletadas() {
+        return this.tareaRepository.findByEstado(Estado.COMPLETADA);
+    }
+
+    public List<Tarea> getTareasVencidas() {
+        return this.tareaRepository.findByFechaVencimientoBefore(LocalDate.now());
+    }
+
+    public List<Tarea> getTareasNoVencidas() {
+        return this.tareaRepository.findByFechaVencimientoAfter(LocalDate.now());
+    }
+
+    public List<Tarea> getTareasTitulo(String titulo) {
+        return this.tareaRepository.findByTituloStartingWith(titulo);
+    }
 }

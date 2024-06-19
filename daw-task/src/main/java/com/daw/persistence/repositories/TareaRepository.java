@@ -6,6 +6,7 @@ import com.daw.persistence.entities.enums.Estado;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -41,6 +42,15 @@ public class TareaRepository {
 
     public List<Tarea> findByEstado(Estado estado) {
         return this.tareaCrudRepository.findByEstado(estado);
+    }
+
+
+    public List<Tarea> findByFechaVencimientoBefore(LocalDate date) {
+        return this.tareaCrudRepository.findByFechaVencimientoBefore(date);
+    }
+
+    public List<Tarea> findByFechaVencimientoAfter(LocalDate date) {
+        return this.tareaCrudRepository.findByFechaVencimientoAfter(date);
     }
 
 }

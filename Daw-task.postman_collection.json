@@ -230,6 +230,94 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Pendientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/pendientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"pendientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Completadas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/completadas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"completadas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EnProgreso",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/enProgreso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"enProgreso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vencidas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8082/dawtask/api/tareas/vencidas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8082",
+							"path": [
+								"dawtask",
+								"api",
+								"tareas",
+								"vencidas"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		}

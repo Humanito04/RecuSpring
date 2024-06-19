@@ -2,7 +2,6 @@ package com.daw.web.controller;
 
 import com.daw.persistence.entities.Tarea;
 import com.daw.services.dto.TareaService;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -79,6 +78,31 @@ public class TareaController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(tareasPendientes, HttpStatus.OK);
+    }
+
+    @GetMapping("/enProgreso")
+    public ResponseEntity<List<Tarea>> enProgreso() {
+        return ResponseEntity.ok(this.tareaService.getTareasEnProgreso());
+    }
+
+    @GetMapping("/completadas")
+    public ResponseEntity<List<Tarea>> completadas() {
+        return ResponseEntity.ok(this.tareaService.getTareasCompletadas());
+    }
+
+    @GetMapping("/vencidas")
+    public ResponseEntity<List<Tarea>> vencidas() {
+        return ResponseEntity.ok(this.tareaService.getTareasVencidas());
+    }
+
+    @GetMapping("/noVencidas")
+    public ResponseEntity<List<Tarea>> noVencidas() {
+        return ResponseEntity.ok(this.tareaService.getTareasNoVencidas());
+    }
+
+    @GetMapping("/titulo/{titulo}")
+    public ResponseEntity<List<Tarea>> findByTitulo(@PathVariable("titulo")String titulo) {
+        return ResponseEntity.ok(this.tareaService.getTareasTitulo(titulo));
     }
 
 
